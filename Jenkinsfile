@@ -17,5 +17,13 @@ pipeline {
        echo 'Deploying...'
      }
    }
-  }
+   stage('Test on Windows') {
+            agent {
+                label 'windows'
+            }
+            steps {
+                bat 'set'
+            }
+        }
+    }
 }
